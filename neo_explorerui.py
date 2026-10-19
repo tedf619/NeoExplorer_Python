@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+"""
+neo_explorer
+
+NEO control
+
+UI source file: neo_explorer.ui
+"""
+
+import pathlib
+import tkinter as tk
+import tkinter.ttk as ttk
+import pygubu
+
+
+class NeoExplorerUI:
+    def __init__(
+        self,
+        master=None,
+        *,
+        project_ui,
+        resource_paths=None,
+        translator=None,
+        on_first_object_cb=None,
+        data_pool=None,
+    ):
+        self.builder = pygubu.Builder(translator=translator, on_first_object=on_first_object_cb, data_pool=data_pool)
+        self.builder.add_from_file(project_ui)
+        if resource_paths is not None:
+            self.builder.add_resource_paths(resource_paths)
+        # Main widget
+        self.mainwindow: None = self.builder.get_object("frame_main", master)
+
+    def run(self):
+        self.mainwindow.mainloop()

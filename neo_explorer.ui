@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.5" author="PygubuDesigner 0.41.4">
+  <project>
+    <settings>
+      <setting id="name">neo_explorer</setting>
+      <setting id="description">NEO Explorer</setting>
+      <setting id="template">application</setting>
+      <setting id="main_widget">frame_main</setting>
+      <setting id="module_namespace" />
+      <setting id="module_name">neo_explorer</setting>
+      <setting id="main_classname">NeoExplorer</setting>
+      <setting id="output_dir" />
+      <setting id="builder_namespace">custom_widgets</setting>
+      <setting id="output_dir2" />
+      <setting id="generate_code_onsave">False</setting>
+      <setting id="use_i18n">False</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="import_tkvariables">False</setting>
+      <setting id="use_ttk_styledefinition_file">False</setting>
+      <setting id="use_window_centering_code">False</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+    <resources />
+  </project>
+  <object class="ttk.Frame" id="frame_main" named="True">
+    <property name="height">500</property>
+    <property name="width">700</property>
+    <layout manager="pack">
+      <property name="expand">true</property>
+      <property name="fill">both</property>
+      <property name="side">top</property>
+    </layout>
+    <containerlayout manager="pack">
+      <property name="propagate">false</property>
+    </containerlayout>
+    <child>
+      <object class="ttk.Frame" id="frame_top" named="True">
+        <property name="height">30</property>
+        <property name="width">600</property>
+        <layout manager="pack">
+          <property name="expand">false</property>
+          <property name="fill">x</property>
+          <property name="side">top</property>
+        </layout>
+        <containerlayout manager="pack">
+          <property name="propagate">false</property>
+        </containerlayout>
+        <child>
+          <object class="ttk.Label" id="label1">
+            <property name="background">blue</property>
+            <property name="foreground">white</property>
+            <property name="text" translatable="yes">Objects Found</property>
+            <layout manager="pack">
+              <property name="expand">true</property>
+              <property name="fill">both</property>
+              <property name="side">top</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Panedwindow" id="paned_window" named="True">
+        <property name="height">300</property>
+        <property name="orient">horizontal</property>
+        <property name="width">500</property>
+        <layout manager="pack">
+          <property name="expand">true</property>
+          <property name="fill">both</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Panedwindow.Pane" id="pane_left" named="True">
+            <property name="weight">1</property>
+            <child>
+              <object class="ttk.Frame" id="frame_left" named="True">
+                <property name="height">300</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
+                  <property name="side">top</property>
+                </layout>
+                <containerlayout manager="pack">
+                  <property name="propagate">false</property>
+                </containerlayout>
+                <child>
+                  <object class="ttk.Treeview" id="treeview_neos" named="True">
+                    <property name="selectmode">browse</property>
+                    <layout manager="pack">
+                      <property name="expand">true</property>
+                      <property name="fill">both</property>
+                      <property name="padx">0</property>
+                      <property name="side">left</property>
+                    </layout>
+                    <child>
+                      <object class="ttk.Treeview.Column" id="column4" named="True">
+                        <property name="column_anchor">w</property>
+                        <property name="heading_anchor">w</property>
+                        <property name="minwidth">80</property>
+                        <property name="stretch">false</property>
+                        <property name="text" translatable="yes">Date</property>
+                        <property name="tree_column">true</property>
+                        <property name="visible">true</property>
+                        <property name="width">80</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Treeview.Column" id="column5" named="True">
+                        <property name="column_anchor">w</property>
+                        <property name="heading_anchor">w</property>
+                        <property name="minwidth">60</property>
+                        <property name="stretch">false</property>
+                        <property name="text" translatable="yes">ID</property>
+                        <property name="tree_column">false</property>
+                        <property name="visible">true</property>
+                        <property name="width">60</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="ttk.Treeview.Column" id="column6" named="True">
+                        <property name="column_anchor">w</property>
+                        <property name="heading_anchor">w</property>
+                        <property name="minwidth">60</property>
+                        <property name="stretch">true</property>
+                        <property name="text" translatable="yes">Name</property>
+                        <property name="tree_column">false</property>
+                        <property name="visible">true</property>
+                        <property name="width">60</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Scrollbar" id="scrollbar_treeview" named="True">
+                    <property name="orient">vertical</property>
+                    <layout manager="pack">
+                      <property name="expand">false</property>
+                      <property name="fill">y</property>
+                      <property name="side">right</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Panedwindow.Pane" id="pane_right" named="True">
+            <property name="weight">3</property>
+            <child>
+              <object class="ttk.Frame" id="frame_right" named="True">
+                <property name="height">200</property>
+                <property name="padding">30 0</property>
+                <property name="relief">solid</property>
+                <property name="width">200</property>
+                <layout manager="pack">
+                  <property name="expand">true</property>
+                  <property name="fill">both</property>
+                  <property name="side">top</property>
+                </layout>
+                <child>
+                  <object class="ttk.Label" id="label2">
+                    <property name="font">TkHeadingFont</property>
+                    <property name="text" translatable="yes">Name:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">30 5</property>
+                      <property name="row">0</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label3">
+                    <property name="text" translatable="yes">Orbiting Body:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">1</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label4">
+                    <property name="text" translatable="yes">Magnitude:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">2</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label5">
+                    <property name="text" translatable="yes">Closest Distance:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">3</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label6">
+                    <property name="text" translatable="yes">Closest Distance On:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">4</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label7">
+                    <property name="text" translatable="yes">Estimated Size:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">5</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label8">
+                    <property name="text" translatable="yes">Relative Velocity:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">6</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label9">
+                    <property name="text" translatable="yes">Potentially Hazardous:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">7</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label10">
+                    <property name="text" translatable="yes">Sentry Object:</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="pady">0 5</property>
+                      <property name="row">8</property>
+                      <property name="sticky">e</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_name" named="True">
+                    <property name="text" translatable="yes">(2013 JR22)</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="pady">30 5</property>
+                      <property name="row">0</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_orbiting_body" named="True">
+                    <property name="text" translatable="yes">Earth</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">1</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_magnitude" named="True">
+                    <property name="text" translatable="yes">20.9</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">2</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_closest_distance" named="True">
+                    <property name="text" translatable="yes">47.6 (in Lunar Units)</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">3</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_closest_distance_on" named="True">
+                    <property name="text" translatable="yes">2026-10-15  20:32</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">4</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_estimated_size" named="True">
+                    <property name="text" translatable="yes">0.18 - 0.40 km</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">5</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_relative_velocity" named="True">
+                    <property name="text" translatable="yes">21.0 km/sec</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">6</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_potentially_hazardous" named="True">
+                    <property name="text" translatable="yes">No</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">7</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Label" id="label_sentry_object" named="True">
+                    <property name="text" translatable="yes">No</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="padx">5</property>
+                      <property name="row">8</property>
+                      <property name="sticky">w</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
